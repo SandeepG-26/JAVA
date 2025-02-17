@@ -1,0 +1,37 @@
+class Cal {
+    int num1, num2;
+
+    Cal(int a, int b) {
+        num1 = a;
+        num2 = b;
+    }
+    void add() {
+        System.out.println("Addition: " + (num1 + num2));
+    }
+
+    void sub() {
+        System.out.println("Subtraction: " + (num1 - num2));
+    }
+
+    void mul() {
+        System.out.println("Multiplication: " + (num1 * num2));
+    }
+    void div() {
+        if (num2 != 0) {
+            System.out.println("Division: " + (num1 / num2));
+        } else {
+            System.out.println("not allowed.");
+        }
+    }
+     
+ }
+public class Main{
+
+    public static void main(String[] args) {
+        Cal calculator = new Cal(10, 5);
+        calculator.add();
+        calculator.sub();
+        calculator.mul();
+        calculator.div();
+    }
+}
