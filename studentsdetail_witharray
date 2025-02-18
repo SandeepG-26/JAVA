@@ -1,0 +1,46 @@
+
+class student
+{
+    Double CGPA;
+	static String dept = "CYBER";
+	String  name;
+	
+	student ( String name, Double CGPA){
+	    
+	    this .name=name;
+	    this.CGPA=CGPA;
+	    
+	}
+	
+	void display(){
+	    
+	    System.out.println("Name : "+ name);
+	    System.out.println("Dept : "+ dept);
+	    System.out.println("CGPA : "+ CGPA);
+	    System.out.println();
+	    
+	}
+}
+
+ public class Main{
+     public static void main(String[] args)
+     {
+         student[] s=new student[5];
+         
+         String [] name={"Hi","Hello", "Welcome","Thank", "U"};
+         double[] CGPA={6,3.3,5.5,7,9};
+         for (int i=0;i<5;i++)
+         {
+             s[i] = new student(name[i],CGPA[i]);
+         }
+         
+
+         
+         
+         for (int i=0;i<5;i++)
+         {
+             s[i].display();
+         }
+     }
+ }
+
