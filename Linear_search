@@ -8,11 +8,11 @@ public class Main
         {
             if(nums[i] == n)
             {
-                System.out.println("Index of " + n + " is: " + i);
+                System.out.println("Index is: " + i);
                 return;
             }
         }
-        System.out.println(n + " not found in the array.");
+        System.out.println(n + " not found");
     }
 
     public static void main(String[] args)
@@ -24,4 +24,3 @@ public class Main
         linear(n, nums);
     }
 }
-
