@@ -20,14 +20,14 @@ class Tree {
         } else {
             Node temp = root;
             while (true) {
-                if (temp.data > data) { // Move to the left subtree
+                if (temp.data > data) { 
                     if (temp.left == null) {
                         temp.left = n;
                         break;
                     } else {
                         temp = temp.left;
                     }
-                } else { // Move to the right subtree
+                } else { 
                     if (temp.right == null) {
                         temp.right = n;
                         break;
