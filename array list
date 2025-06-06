@@ -57,6 +57,7 @@ class Main{
                 val = n.nextInt();
                 System.out.println("Enter the index: ");
                 index = n.nextInt();
+                numbers.get(index,val);
                 break;
                 
         case 8:System.out.println(numbers.isEmpty());
