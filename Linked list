@@ -1,0 +1,81 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+    Scanner n = new Scanner(System.in);
+    int choice, val, index;
+    LinkedList<Integer> numbers = new LinkedList<>();
+    
+    
+    
+    while(true){
+    System.out.println("----List menu----");
+    System.out.println("1. Adding the data");
+    System.out.println("2. get the date from specific index");
+    System.out.println("3. Remove the data from specfic index");
+    System.out.println("4. Remove the specfic index");
+    System.out.println("5. Find the list size");
+    System.out.println("6. Search");
+    System.out.println("7. inserting at a specific index");
+    System.out.println("8. List check for empty");
+    System.out.println("9. find check for empty");
+    System.out.println("10. clear the list");
+    System.out.println("11. display");
+    System.out.println("12. Exit");
+    System.out.println("-----------------");
+    
+    choice = n.nextInt();
+    switch(choice){
+        
+        case 1:System.out.println("Enter ur number :");
+                val = n.nextInt();
+                numbers.add(val);
+                System.out.println(val+"added to ur list ");
+                break;
+        case 2:System.out.println("Enter ur index :");
+                index = n.nextInt();
+                System.out.println(numbers.get(index));
+                break;
+                
+        case 3:System.out.println("Enter ur index :");
+                index = n.nextInt();
+                System.out.println(numbers.get(index)+"is removed");
+                numbers.remove(index);
+                break;
+        case 4:System.out.println("Enter ur data :");
+                val = n.nextInt();
+                System.out.println("Removed"+val+"from the list");
+                numbers.remove(Integer.valueOf(val));
+               
+                break;
+        case 5:System.out.println("The list has  "+numbers.size()+"elements");
+                break;
+        case 6:System.out.println("Enter ur data:-");
+                val = n.nextInt();
+                System.out.println(val+"is found at index " +numbers.contains(val));
+                break;
+        case 7:System.out.println("Enter ur data :");
+                val = n.nextInt();
+                System.out.println("Enter the index: ");
+                index = n.nextInt();
+                numbers.add(index,val);
+                break;
+                
+        case 8:System.out.println(numbers.isEmpty());
+                break;
+                
+        case 9:System.out.println("Enter ur data :");
+                val = n.nextInt();
+                System.out.println("The index is" +val+"is"+numbers.indexOf(val));
+                break;
+        case 10:numbers.clear();
+                System.out.println("Cleared");
+                break;
+        case 11:System.out.println("List the element are: ");
+                System.out.println(numbers);
+        case 12:System.out.println("BYEEEEEEEEE");System.exit(0);
+        default : System.out.println("Invalid!!!!!!!!!");
+    }
+    }
+    
+}
+}
